@@ -11,10 +11,13 @@ dotenv.config({ path: "./config.env" })
 const { default: app } = await import("./app.js")
 
 const DB = process.env.DATABASE
-mongoose.connect(DB).then(() => console.log("DB Connection Successful"))
+mongoose
+  .connect(DB)
+  .then(() => console.log("DB Connection Successful"))
+  .catch((err) => console.error("❌ DB connect failed", err))
 
 const port = process.env.PORT || 3000
-const server = app.listen(port, () => {
+const server = app.listen(port, "0.0.0.0", () => {
   console.log(`App running on Port ${port}...`)
 })
 
