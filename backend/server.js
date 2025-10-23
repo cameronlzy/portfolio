@@ -10,10 +10,7 @@ dotenv.config({ path: "./config.env" })
 
 const { default: app } = await import("./app.js")
 
-const DB = process.env.DATABASE.replace(
-  "<PASSWORD>",
-  process.env.DATABASE_PASSWORD
-)
+const DB = process.env.DATABASE
 mongoose.connect(DB).then(() => console.log("DB Connection Successful"))
 
 const port = process.env.PORT || 3000
