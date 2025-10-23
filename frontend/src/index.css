@@ -144,3 +144,29 @@ body,
   display: inline-block;
   transform-origin: 70% 70%; /* slight offset makes it look more natural */
 }
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent !important; /* no bg */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(160, 160, 160, 0.4); /* subtle grey thumb */
+  border-radius: 9999px;
+  border: 2px solid transparent; /* space from edges */
+  background-clip: content-box;
+}
+
+*::-webkit-scrollbar-corner {
+  background: transparent !important;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(160, 160, 160, 0.4) transparent; /* thumb + transparent track */
+}
