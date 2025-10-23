@@ -21,8 +21,6 @@ const server = app.listen(port, () => {
   console.log(`App running on Port ${port}...`)
 })
 
-console.log("DATABASE:", process.env.DATABASE?.slice(0, 50))
-
 process.on("unhandledRejection", (err) => {
   unhandledError(err, "UNHANDLED REJECTION!", server)
 })
