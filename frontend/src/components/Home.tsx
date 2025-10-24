@@ -247,10 +247,6 @@ const Home = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               Projects & Experience
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl">
-              Showcasing my latest work, professional experience, and speaking
-              engagements.
-            </p>
           </div>
 
           {/* Error Message */}
