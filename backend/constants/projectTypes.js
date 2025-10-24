@@ -1,1 +1,1 @@
-export const PROJECT_TYPES = ["event", "project", "experience"]
+export const PROJECT_TYPES = ["event", "project", "experience", "certificate"]
