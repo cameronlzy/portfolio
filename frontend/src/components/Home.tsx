@@ -8,6 +8,7 @@ import {
   Calendar,
   Rocket,
   Award,
+  FileText,
 } from "lucide-react"
 import ProjectCard from "./ProjectCard"
 import { getProjects } from "@/services/projectService.ts"
@@ -25,6 +26,7 @@ const Home = () => {
 
   const current_class = import.meta.env.VITE_CURRENT_CLASS
   const current_quest = import.meta.env.VITE_CURRENT_QUEST
+  const resumeUrl = import.meta.env.VITE_RESUME_URL
 
   const [activeTab, setActiveTab] = useState("projects")
 
@@ -162,6 +164,26 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
+
+                {resumeUrl && (
+                  <a
+                    href={resumeUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="
+                      flex items-center justify-center gap-3 
+                      w-full py-4 bg-emerald-500 text-white 
+                      border-2 border-gray-900 
+                      shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] 
+                      hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px] 
+                      transition-all
+                      font-['Press_Start_2P'] text-xs
+                    "
+                  >
+                    <FileText className="w-4 h-4" />
+                    VIEW RESUME
+                  </a>
+                )}
               </div>
             </div>
           </div>
